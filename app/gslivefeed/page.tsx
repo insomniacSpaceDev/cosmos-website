@@ -48,7 +48,7 @@ const Carousel = ({ items }) => {
 
   return (
     <div className="relative w-full">
-      <h2 className="text-lg font-bold mb-4">BEST OF ALL SKY LIVE FEED</h2>
+      <h2 className="text-lg font-bold mb-4">BEST OF GROUND STATION LIVE FEED</h2>
       <div className="relative flex items-center">
         <button 
           onClick={prevSlide}
@@ -80,7 +80,7 @@ const Carousel = ({ items }) => {
 };
 
 // Main Component
-const SkyLiveFeed = () => {
+const GSLiveFeed = () => {
   const carouselItems = [
     {
       title: "Live Broadcast",
@@ -99,11 +99,11 @@ const SkyLiveFeed = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-2xl font-bold text-red-600 mb-6">ALL SKY LIVE FEED</h1>
+      <h1 className="text-2xl font-bold text-red-600 mb-6">GROUND STATION LIVE FEED</h1>
       <VideoPlayer />
       <Carousel items={carouselItems} />
     </div>
   );
 };
 
-export default SkyLiveFeed;
+export default GSLiveFeed;
