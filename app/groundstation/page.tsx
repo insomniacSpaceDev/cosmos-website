@@ -1,105 +1,51 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/gscard'
-import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
-import React from 'react'
+import InfoCard from "@/components/infoCard";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import React from "react";
 
 const page = () => {
-  return (
-    <div>GROUND STATION
-         <div><Carousel>
-  <CarouselContent>
-    <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
-    <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
-    <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
-  </CarouselContent>
-</Carousel>
-</div>
-         <div className="grid grid-cols-2 gap-4">
-      <Card>
-        <CardHeader>
-          <CardTitle>Dome</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Our sales support team will come & measure your property in order to ensure accuracy in design and finish. We'll calculate their plans, then we'll assist. Based on the measurement the 125 22 20 is charged to schedule a visit, or visit one of our Showrooms.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
+    const cards = [
+        {
+            title: "Dome",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            imageUrl: undefined,
+        },
+        {
+            title: "Dome",
+            description:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            imageUrl: undefined,
+        },
+    ];
+    return (
+        <div>
+            GROUND STATION
+            <div>
+                <Carousel>
+                    <CarouselContent>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+                        <CarouselItem className="md:basis-1/2 lg:basis-1/3">...</CarouselItem>
+                    </CarouselContent>
+                </Carousel>
+            </div>
+            <div className="max-lg:px-10 px-52 flex flex-col items-center align-middle space-y-6">
+                {/* <InfoCard
+                    title="Dome"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                /> */}
+                {cards.map((card, index) => (
+                    <InfoCard
+                        key={index}
+                        title={card.title}
+                        description={card.description}
+                        imageUrl={card.imageUrl}
+                        isImageLeft={index % 2 === 0}
+                    />
+                ))}
+            </div>
         </div>
-      </Card>
+    );
+};
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Mount</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Consult our professionals by calling our toll-free number 800 123 32 30 or by visiting one of our showrooms where our qualified sales team will offer you product advice highlighting the latest interior and exterior trends.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
-        </div>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Control Room</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Our sales support team will come & measure your property in order to ensure accuracy in design and finish. We'll calculate their plans, then we'll assist. Based on the measurement the 125 22 20 is charged to schedule a visit, or visit one of our Showrooms.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
-        </div>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Mount</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Consult our professionals by calling our toll-free number 800 123 32 30 or by visiting one of our showrooms where our qualified sales team will offer you product advice highlighting the latest interior and exterior trends.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
-        </div>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Mount</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Consult our professionals by calling our toll-free number 800 123 32 30 or by visiting one of our showrooms where our qualified sales team will offer you product advice highlighting the latest interior and exterior trends.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
-        </div>
-      </Card>
-
-      <Card>
-        <CardHeader>
-          <CardTitle>Mount</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p>Consult our professionals by calling our toll-free number 800 123 32 30 or by visiting one of our showrooms where our qualified sales team will offer you product advice highlighting the latest interior and exterior trends.</p>
-        </CardContent>
-        <div className="flex justify-end">
-          <button className="bg-gray-800 text-white px-4 py-2 rounded-md hover:bg-gray-700">
-            LEARN MORE
-          </button>
-        </div>
-      </Card>
-    </div>
-    </div>
-  )
-}
-
-export default page
+export default page;

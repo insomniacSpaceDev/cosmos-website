@@ -16,9 +16,11 @@ const Navbar = () => {
 
     const navLinks = [
         { href: "/about-us", label: "About Us" },
-        { href: "/our-team", label: "Our Team" },
+        { href: "/observatory", label: "Observatory" },
+        { href: "/groundstation", label: "Ground Station" },
         { href: "/events", label: "Events" },
         { href: "/gallery", label: "Gallery" },
+        { href: "/our-team", label: "Our Team" },
         { href: "/contact-us", label: "Contact Us" },
     ];
 
@@ -26,7 +28,9 @@ const Navbar = () => {
         <nav className="relative bg-black text-white">
             <div className="flex items-center justify-between px-4 md:px-6 py-4 mx-4 md:mx-20 rounded-b-3xl">
                 {/* Logo */}
-                <Image src="/LOGO.svg" alt="logo" height={125} width={125} />
+                <Link href="/">
+                    <Image src="/LOGO.svg" alt="logo" height={125} width={125} />
+                </Link>
 
                 {/* Desktop Navigation Links */}
                 <div className="hidden md:flex space-x-6">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 
 export default function Home() {
     const teamMembers = [
@@ -40,33 +41,37 @@ export default function Home() {
                     {/* Right Cards Section */}
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Observatory Card */}
-                        <div className="bg-gray-800 p-6 rounded-lg text-center">
-                            <div className="flex justify-center items-center mb-4">
-                                <div className="bg-gray-700 p-4 rounded-full">
-                                    <IoTelescope className="text-2xl text-white" />
+                        <Link href="/observatory">
+                            <div className="bg-gray-800 p-6 rounded-lg text-center">
+                                <div className="flex justify-center items-center mb-4">
+                                    <div className="bg-gray-700 p-4 rounded-full">
+                                        <IoTelescope className="text-2xl text-white" />
+                                    </div>
                                 </div>
+                                <h3 className="text-xl font-semibold mb-2">Observatory</h3>
+                                <p className="text-gray-400">
+                                    Explore the latest missions, both past and present, from NASA,
+                                    ESA, SpaceX, and other space agencies and organizations.
+                                </p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">Observatory</h3>
-                            <p className="text-gray-400">
-                                Explore the latest missions, both past and present, from NASA, ESA,
-                                SpaceX, and other space agencies and organizations.
-                            </p>
-                        </div>
+                        </Link>
 
                         {/* Ground Station Card */}
-                        <div className="bg-gray-800 p-6 rounded-lg text-center">
-                            <div className="flex justify-center items-center mb-4">
-                                <div className="bg-gray-700 p-4 rounded-full">
-                                    <LuSatelliteDish className="text-2xl text-white" />
+                        <Link href="/groundstation">
+                            <div className="bg-gray-800 p-6 rounded-lg text-center">
+                                <div className="flex justify-center items-center mb-4">
+                                    <div className="bg-gray-700 p-4 rounded-full">
+                                        <LuSatelliteDish className="text-2xl text-white" />
+                                    </div>
                                 </div>
+                                <h3 className="text-xl font-semibold mb-2">Ground Station</h3>
+                                <p className="text-gray-400">
+                                    Delve into the cutting-edge technology powering space
+                                    exploration, from spacecraft and telescopes to propulsion
+                                    systems and space habitats.
+                                </p>
                             </div>
-                            <h3 className="text-xl font-semibold mb-2">Ground Station</h3>
-                            <p className="text-gray-400">
-                                Delve into the cutting-edge technology powering space exploration,
-                                from spacecraft and telescopes to propulsion systems and space
-                                habitats.
-                            </p>
-                        </div>
+                        </Link>
                     </div>
                 </section>
                 <section className="px-6 py-12 bg-black text-white text-center">
@@ -110,7 +115,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                
+                <Footer />
             </main>
         </div>
     );
