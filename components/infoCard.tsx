@@ -20,7 +20,7 @@ const InfoCard = ({
         <Card className="bg-[#313131] overflow-hidden rounded-3xl">
             <div className="flex flex-col md:flex-row">
                 {isImageLeft && (
-                    <div className="w-full md:w-1/2 m-5 md:m-0">
+                    <div className="w-full md:w-1/2 m-5  max-md:m-0">
                         <Image
                             src={imageUrl}
                             width={800}
@@ -42,7 +42,7 @@ const InfoCard = ({
                     </Button>
                 </CardContent>
                 {!isImageLeft && (
-                    <div className="w-full md:w-1/2 m-5">
+                    <div className="w-full md:w-1/2 m-5 max-md:m-0">
                         <Image
                             src={imageUrl}
                             width={800}

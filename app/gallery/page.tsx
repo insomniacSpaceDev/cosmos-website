@@ -43,7 +43,9 @@ const GalleryNav = ({ activeFilter, onFilterChange }) => {
 const ImageCard = ({ src, alt, className }) => {
     return (
         <div className={`rounded-lg overflow-hidden ${className}`}>
-            <img
+            <Image
+                height={500}
+                width={500}
                 src={src}
                 alt={alt}
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-300"
@@ -87,14 +89,15 @@ const Gallery = () => {
                 <GalleryHeader />
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-xl text-white font-semibold">Observatory Processed Images</h2>
+                        <h2 className="text-xl text-white font-semibold">
+                            Observatory Processed Images
+                        </h2>
                         <GalleryNav activeFilter={activeFilter} onFilterChange={setActiveFilter} />
                     </div>
                     <GalleryGrid />
                 </div>
             </div>
         </div>
-        
     );
 };
 
