@@ -55,16 +55,17 @@ const ImageCard = ({ src, alt, className }) => {
 // Main Gallery Grid Component
 const GalleryGrid = () => {
     const images = [
-        { src: "https://placehold.co/400x300", alt: "Mountain lake view", span: "col-span-1" },
-        { src: "https://placehold.co/400x500", alt: "Road through trees", span: "col-span-1" },
-        { src: "https://placehold.co/800x400", alt: "Snowy mountains", span: "col-span-2" },
-        { src: "https://placehold.co/400x300", alt: "Mountain lake view 2", span: "col-span-1" },
-        { src: "https://placehold.co/400x600", alt: "Tree-lined road", span: "col-span-1" },
-        { src: "https://placehold.co/400x300", alt: "Lake view 3", span: "col-span-1" },
-        { src: "https://placehold.co/400x300", alt: "Mountain view 4", span: "col-span-1" },
-        { src: "https://placehold.co/400x300", alt: "Lake scene 5", span: "col-span-1" },
-        { src: "https://placehold.co/400x300", alt: "Mountain lake 6", span: "col-span-1" },
-        { src: "https://placehold.co/800x400", alt: "Snow-capped peaks", span: "col-span-2" },
+        { src: "/observatory/image1.jpg", alt: "Eagle Nebula", span: "col-span-1" },
+        { src: "/observatory/image2.jpg", alt: "Road through trees", span: "col-span-1" },
+        { src: "/observatory/image3.jpg", alt: "Mountain lake view 2", span: "col-span-1" },
+        { src: "/observatory/image4.jpg", alt: "Tree-lined road", span: "col-span-1" },
+        { src: "/observatory/image5.jpg", alt: "Lake view 3", span: "col-span-1" },
+        { src: "/observatory/image6.jpg", alt: "Snowy mountains", span: "col-span-1" },
+        { src: "/observatory/image7.jpg", alt: "Mountain view 4", span: "col-span-1" },
+        { src: "/observatory/image8.jpg", alt: "Lake scene 5", span: "col-span-1" },
+        { src: "/observatory/image9.jpg", alt: "Mountain lake 6", span: "col-span-1" },
+        { src: "/observatory/image10.jpg", alt: "Snow-capped peaks", span: "col-span-1" },
+        { src: "/observatory/image11.jpg", alt: "Snow-capped peaks", span: "col-span-1" },
     ];
 
     return (
@@ -86,13 +87,14 @@ const Gallery = () => {
                 <GalleryHeader />
                 <div className="flex flex-col">
                     <div className="flex justify-between items-center mb-8">
-                        <h2 className="text-xl text-white font-semibold">From Our Gallery</h2>
+                        <h2 className="text-xl text-white font-semibold">Observatory Processed Images</h2>
                         <GalleryNav activeFilter={activeFilter} onFilterChange={setActiveFilter} />
                     </div>
                     <GalleryGrid />
                 </div>
             </div>
         </div>
+        
     );
 };
 

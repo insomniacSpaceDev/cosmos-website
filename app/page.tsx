@@ -50,8 +50,9 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">Observatory</h3>
                                 <p className="text-gray-400">
-                                    Explore the latest missions, both past and present, from NASA,
-                                    ESA, SpaceX, and other space agencies and organizations.
+                                    Exploring the vastness of the cosmos through observations and research with our cutting-edge equipments. 
+                                    Join us as we unveil the mysteries of the universe.
+                                
                                 </p>
                             </div>
                         </Link>
@@ -66,9 +67,8 @@ export default function Home() {
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">Ground Station</h3>
                                 <p className="text-gray-400">
-                                    Delve into the cutting-edge technology powering space
-                                    exploration, from spacecraft and telescopes to propulsion
-                                    systems and space habitats.
+                                    Bridging the gap between Earth and space with real-time satellite communication, radio astronomy and data reception. 
+                                    Unlocking the future of space technology.
                                 </p>
                             </div>
                         </Link>
